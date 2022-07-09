@@ -1,0 +1,31 @@
+4/March/22:
+anims: anims consists of all the animation texts list
+1.player anims list:
+-player_walk
+
+in main we import pygame, we have the init things and also
+a while TRUE loop that updates everything, there we call the background function
+and after that we call every thing we want to be updated every tick,
+we have player_move and playerStrech methods that are called from the keysAction method
+which is a method that handles the pressed keys input and also the key events (key up /down)
+using if statements we can call the methods according to what keys are being pressed.
+
+the robot is a collection of symbols in a text, the text itself and the animations is saved in
+anims files, the animation starts when the function player_move is triggered,this function takes a key
+as a parameter which is the pressed key, this function is always being updated (while a key is pressed)
+so to add delay to it, I did ...get_ticks() % delay == 0, so this function calls the animation function
+which is also delay using a different idea (same principle using ticks) but then the string is altered and
+the frames of the animation start to go and that's done by changing the var: strToRenderWalk.
+
+strech uses a changing of the "font size" from the function render_multi_line()
+
+5/March/22:
+added list and queue data structures, the queue is going to be used for the dialoge typewriter.
+added the method dialogue manager, but not fully implemented, has some problems that need solving
+
+7/March/22:
+worked on dialouges, work fine but there's a problem with delays (try changing the modolo in the delay counter)
+
+16/march/22:
+changed the dialogue system to use threads instead, planing to make a good thread pool.
+added arrow
